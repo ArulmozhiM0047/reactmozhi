@@ -1,5 +1,75 @@
 function App()
 {
+var unit=102
+ return(<>
+ <center><h2>Electricity Bill Calculation</h2></center>
+ <h3>{(unit<=100 && "Rs.0")||
+  (unit>=101 && unit<125  && "Rs.50")||
+ (unit>=101 && unit<200 && "Rs."+(unit-100)*2)||
+ (unit>=201 && unit<=300 && "Rs."+(200+(unit-200)*3))||
+ (unit>=301 && unit<=400 && "Rs."+(500+(unit-300)*4))||
+   "₹"+(900+(unit-400)*5)
+   }</h3>
+    </>)
+  }
+export default App
+
+
+
+/*function App()
+{
+  var avg=45
+  return(<>
+  <h1>React Simple if else if statement</h1>
+  <h2>{(avg>=85 && "outstanding")||(avg>=75 && "excellent")||(avg>=65 && "very good")||(avg>=50 && "good")|| "fair"}</h2>
+  </>)
+}
+export default App
+
+/*
+function App()
+{
+  var age =20
+  return(<>
+  <h1>{(age>10& "eligible")||"not eligible"}</h1>
+  </>)
+}
+export default App
+
+
+/*function App()
+{num=100
+  return(<>
+  <h1>React Simple if statement</h1>
+  <h2>{(+ve>-ve && "POSITIVE")||"NEGATIVE"}</h2>
+  </>)
+}
+export default App
+
+
+/*function App()
+{
+  var No =100
+  return(<>
+  <h1> React Simple if statement</h1>
+  <h2>{(No>101 && "odd")||"Even"}</h2>
+  </>)
+}
+export default App
+
+/*function App()
+{
+  var mark=4
+  return(<>
+  <h1>React Simple if statement</h1>
+  <h2>{(mark>34 && "PASS")||"FAIL"}</h2>
+  </>)
+}
+export default App
+
+
+/*function App()
+{
   if(true)
   {
     var v=100
