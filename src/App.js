@@ -1,18 +1,156 @@
-function App()
+ 
+  import Arulmozhi from "./mycomponents/Arulmozhi"
+import { aadhar, accno, place, sname } from "./mycomponents/commonvar"
+
+
+  function App()
+  {
+    return(
+      <>
+      <Arulmozhi/>
+      <h1>this is default App components</h1>
+      <h2>my name is :{sname}</h2>
+      <h3>my city:{place}</h3>
+      <h3>my aadhar:{aadhar}</h3>
+      <h4>my accno :{accno}</h4>
+      </>
+    )
+  }
+  export default App
+  
+  
+  /*function App()
+ {
+  var arr=[11,22,33,44,78,98,43,27,678,101,420,12]
+  var ma=arr[0]
+  var s=0
+
+  var order=arr
+  var fans=""
+  return(
+    <>
+    <h1>React loop map method </h1>
+    <h2>old model</h2>
+    {arr[0]}
+    {arr[1]}
+    {arr[3]}
+    <h2>New Model Map (loop)</h2>
+    {arr.map((v)=><>{v}+</>)}
+    <h2>New Model Map (loop)</h2>
+    <ol type="I">
+      {arr.map((v)=><li>{v}</li>)}
+    </ol>
+    <h2>task:sum of arry</h2>
+    <div style={{display:"none"}}>
+      {arr.map((item)=><>{s=s+item}<br></br></>)}
+    </div>
+    <h3>Sum of Array:{s}</h3>
+
+    <div style={{display:"none"}}>
+      {arr.map((v)=><>{ma<v && <>{ma=v}</>}</>)}
+    </div>
+
+    <h3>Max of Array:{ma}</h3>
+    
+
+    <h2>Ascending order</h2>
+    <div style={{display :"none"}}>{order.sort((x,y)=>(x-y))}</div>
+    {order.map((item)=><>{item } + </>)}
+
+    <h2>descending order</h2>
+    <div style={{display:"none"}}>{order.sort((x,y)=>(y-x))}</div>
+    {order.map((item)=><>{item} ,</>)}
+
+<h3>Adding element in an array</h3>
+<div style={{display:"none"}}>{order.push(999)}</div>
+{order.map((item)=><>{item},</>)}
+
+
+<br></br>
+
+<h3>romove last element in an array </h3>
+<div style={{display:"none"}}>{order.pop()}</div>
+<div style={{display:"none"}}>{order.pop()}</div>
+<div style={{display:"none"}}>{order.pop()}</div>
+{order.map((item)=><>{item},</>)}
+
+<h2>Remove last comma or plus or any char</h2>
+<div style={{display:"none"}}>{order.map((item)=><>{fans=fans+item+","}</>)}</div>
+{fans.slice(0,-1)}
+
+  
+ </>)}
+ export default App
+ 
+ 
+ 
+ /*function App()
+ {
+  var arr=[11,22,33,44,55,66]
+  var [v1,,v2,...v3]=arr
+  return(<>
+  <h2>spread operator</h2>
+  <h3>index 0:{v1}</h3>
+  <h3>index 1:{v2}</h3>
+  <h3>index 5:{v3}</h3>
+  </>)
+ }
+ export default App
+ 
+
+ /*function App()
+{
+  var res="fail"
+  var avg=85.6
+  return(<>
+  <h2>
+    {
+     (res==="pass" && 
+      ((avg>=85 && "outstanding")||
+      (avg>=75 && "excellent")||
+      (avg>=65 && "very good")||
+      (avg>=50 && "good")||
+      "fair")) || "no grade becasue fail" }
+  </h2>
+  </>)
+    }
+export default App
+
+
+
+/*function App()
+{
+  var unit =130
+  return(
+    <>
+    <center><h2>Electricity Bill Calculation</h2></center>
+   <h3>{(unit<=100 && "Rs.0") || (unit>=101 && unit<=200 && "Rs."+(unit-100)*2)||
+    (unit>=201 && unit<=300 && "Rs."+(200+(unit-200)*3))||
+    (unit>=301 && unit<=400 && "Rs."+(500+(unit-300)*4))||
+    "Rs."+(900+(unit-400)*5)
+    }</h3>
+    </>
+  )
+}
+export default App
+
+
+
+/*function App()
 {
 var unit=102
  return(<>
  <center><h2>Electricity Bill Calculation</h2></center>
  <h3>{(unit<=100 && "Rs.0")||
-  (unit>=101 && unit<125  && "Rs.50")||
- (unit>=101 && unit<200 && "Rs."+(unit-100)*2)||
+  (unit>=101 && unit<124 && "Rs.50")||
+ (unit>=125 && unit<200 && "Rs."+(unit-100)*2)||
  (unit>=201 && unit<=300 && "Rs."+(200+(unit-200)*3))||
  (unit>=301 && unit<=400 && "Rs."+(500+(unit-300)*4))||
    "₹"+(900+(unit-400)*5)
    }</h3>
     </>)
   }
-export default App
+export default App 
 
 
 
