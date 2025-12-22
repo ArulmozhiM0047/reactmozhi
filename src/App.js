@@ -1,5 +1,145 @@
+//22*12*25
+//finding data type
+function App(props)
+{
+  var a=props.data.rno
+  var b=props.data.sname
+  var c=props.data.issingle
+  var d=props.data.mark
+  var e=props.data.hobbies
+  return(<>
+  <h3>type of rno:{typeof(a)}</h3>
+  <h3>type of sname:{typeof(b)}</h3>
+  <h3>type of martial status:{typeof(c)}</h3>
+  <h3>type of marks:{typeof(d)}</h3>
+  <h3>{Array.isArray(d)?"it is array":"it is object json"}</h3>
+  <h3>{Array.isArray(e)?"it is array":"it is object json"}</h3>
+  </>
+  )
+}
+export default App
+
+/*import parse from 'html-react-parser' //function components
+function App(props)
+{
+  var ans=""
+  for(var s in props.data)
+  {
+    ans=ans+`<li>${s}=${props.data[s]}</li>`
+    console.log(s)
+  }
+  return(
+    <>
+    {parse("<ol>"+ans+"</ol>")}
+      </>
+  )
+    }
+  export default App
+
+
+//class components
+/*import React from"react";
+import parse from 'html-react-parser';
+class App extends React.Component
+{
+  constructor(props)
+  {
+  var ans=""
+  super(props)
+  for(var s in props.data)
+  {
+    ans=ans+`<li>${s}=${props.data[s]}</li>`
+    console.log(s)
+  }
+  this.state={
+    res:"<ol type='I'>"+ans+"</ol>"
+  }
+}
+render()
+{
+  return(<>
+  <h1>combine react state+ properties</h1>
+  {parse(this.state.res)}
+  <div id="res"></div>
+  </>)
+  }
+  }
+  export default App
+
+
+/*import React from "react";
+ import parse from'html-react-parser';
+ class App extends React.Component
+ {
+  constructor(props)
+ {
+  var ans=""
+  super(props)
+  for(var s in props.data)
+  {
+    ans=ans+`${s}=${props.data[s]}<br></br>`
+    console.log(s)
+  }
+  this.state={
+    res:ans
+  }
+}
+render()
+{
+  return(
+    <>
+    <h1>combine react state+props</h1>
+    {parse(this.state.res)}
+    <div id ="res"></div>
+    </>
+  )
+}
+ }
+ export default App
  
-  import Arulmozhi from "./mycomponents/Arulmozhi"
+ /*import React from "react";
+ class App extends React.Component
+ {
+  constructor()
+  {
+    super()
+    this.state={
+      sno:111,
+      sname:"Arul",
+      marks:[95,88,87,65,100]
+ }
+  }
+  show=()=>{
+    this.setState({sname:"Arulmozhi M"})
+  }
+  dis=()=>{
+    this.setState({marks:[10,23,45,34,45]})
+  }
+  dis1=()=>{
+    const newmarks=[...this.state.marks]
+    newmarks[2]=99
+    this.setState({marks:newmarks})
+  }
+render()
+  {
+    return(<>
+    <h1>This is class components</h1>
+    <h2>serial number:{this.state.sno}</h2>
+    <h2>student name:{this.state.sname}</h2>
+    <h2>student mark:{this.state.marks} </h2>
+    {this.state.marks.map((v,index)=><>mark:{index+1}={v}<br></br></>)}
+    <button onClick={this.show}>update name</button>
+    <button onClick={this.dis}>update all mark</button>
+    <button onClick={this.dis1}>update single </button>
+    </>)
+  }
+}
+export default App
+ 
+ 
+ 
+ 
+ /* import Arulmozhi from "./mycomponents/Arulmozhi" 
 import { aadhar, accno, place, sname } from "./mycomponents/commonvar"
 
 
@@ -54,7 +194,8 @@ import { aadhar, accno, place, sname } from "./mycomponents/commonvar"
     
 
     <h2>Ascending order</h2>
-    <div style={{display :"none"}}>{order.sort((x,y)=>(x-y))}</div>
+    <div style={{display :"none"}}>{order.sort((x,y)=>(x-y))}=><>{fans=fans+item+","}</>)}</div>
+   {fans.slice(0,-1)}</div>
     {order.map((item)=><>{item } + </>)}
 
     <h2>descending order</h2>
@@ -63,10 +204,9 @@ import { aadhar, accno, place, sname } from "./mycomponents/commonvar"
 
 <h3>Adding element in an array</h3>
 <div style={{display:"none"}}>{order.push(999)}</div>
-{order.map((item)=><>{item},</>)}
+{order.map((item)=><>{item},</>)} ;
+<br></br> 
 
-
-<br></br>
 
 <h3>romove last element in an array </h3>
 <div style={{display:"none"}}>{order.pop()}</div>
