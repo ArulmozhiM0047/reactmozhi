@@ -1,6 +1,99 @@
+//23*12*25  & 24*12*25
+import { useState } from 'react' //
+import React from 'react'
+const App = () => {
+   const [name,setName]=useState("---")            //declaration line
+
+  const dis=(event)=>{                       //name=default ,setname=changeing name
+    setName(event.target.value)  //value=textbox la type panradhu & event.target=textbox 
+    }
+    const show=(v)=>{
+      console.log(v)
+    }
+    const find=(v1,v2)=>{
+      console.log(v1+v2)
+    }
+  
+  return (
+    <div>
+        <form>
+      <input type="text" value={name} onChange={dis} placeholder="enter user name"></input><br></br>
+      <input type="password" onChange={()=>show("12345")} placeholder='enter password'></input><br></br>
+      <input type="number"  onChange={()=>find(12,45)}placeholder='enter accno'></input><br></br>
+      <input type="email" plsceholder='enter email:'></input><br></br>
+      <label>select gender:</label>
+      <input type="radio"></input>male
+      <input type="radio"></input>Female
+      <input type="radio"></input>others
+      <br></br>
+      <label>selecter gender</label>
+      <input type="radio" name="gen"></input>male
+      <input type="radio" name="gen"></input>Female
+      <input type="radio" name="gen"></input>others
+      <br></br>
+      <lable>select course</lable>
+      <input type="checkbox" name="c1"></input>C
+      <input type="checkbox" name="c2"></input>c++
+      <input type="checkbox" name="c3"></input>java
+      <input type="checkbox" name="c4"></input>python
+      <input type="checkbox" name="c5"></input>none of these above 
+      <br></br>
+      <select>
+        <option selected>select month</option>
+        <option>january</option>
+        <option>february</option>
+        <option>march</option>
+        <option>april</option>
+      </select>
+      <br></br>
+      select color:<input type="color" name="col"></input>
+      <br></br>
+      select DOB:<input type="date" name="dob"></input>
+      <br></br>
+      select time:<input type="time" name="time"></input>
+      <br></br>
+      select week: <input type="week" name="wk"></input>
+      <br></br>
+      uplode resume:<input type="file" name="f1"></input>
+    <br></br>
+    <label>type your address:</label>
+    <textarea rows="7" cols="25"></textarea>
+    <br></br>
+    <label>list box</label>
+    <select size="4" multiple>
+      <option>sunday</option>
+      <option>monday</option>
+      <option>tuesday</option>
+      <option>wednes day</option>
+      <option>thursday</option>
+      <option>friday</option>
+      <option>saturday</option>
+    </select>
+    <br></br>
+     <label>volume:</label>
+    <input type="range" min="0" max="6"></input>
+    <button><b><s>clickme</s></b></button>
+      <br></br>
+      <label>type your feedback</label>
+      <input type="submit"></input>
+      <input type="button" value="clickme"></input>
+      {/* <progress min="0" max="100" value="90" ></progress>  */}
+      <br></br>
+      <label>progress bar 90% completed</label>
+      <progress style={{backgroundColor:'blue',border:"2px solid orange"}} min="0" max="100" value="90" ></progress>
+      <br></br>
+      <font size="7">😎😎😎🎶🎶</font>
+      </form>
+    </div>
+  )
+}
+
+export default App
+
+
 //22*12*25
 //finding data type
-function App(props)
+/*function App(props)
 {
   var a=props.data.rno
   var b=props.data.sname
